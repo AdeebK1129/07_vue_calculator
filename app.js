@@ -14,16 +14,17 @@ const app = createApp({
 
     methods:{
         evaluateString(){
-            try{eval(this.inputField);} 
+            try{
+                this.errBoolean = false;
+                eval(this.inputField)
+                this.formerExpressions.push(this.inputField);
+                this.inputField = eval(this.inputField);
+                console.log(this.formerExpressions);
+            } 
             catch (error){
                 this.errBoolean = true;
             }
-
-            if(this.errBoolean) this.errBoolean = false;
-
-            this.formerExpressions.push(this.inputField);
-            this.inputField = eval(this.inputField);
-            console.log(this.formerExpressions);
+            
         }
     }
 }).mount('#app')
