@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    margin: 0;
+}
+
+.calculator {
+    width: 400px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+
+}
+
+.inputResults{
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numPad{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 17%;
+    margin: 5px;
+    height: 40px;
+}
+
+.operators{
+
+}
+
+
