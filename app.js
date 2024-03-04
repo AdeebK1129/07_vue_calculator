@@ -25,6 +25,14 @@ const app = createApp({
                 this.errBoolean = true;
             }
             
+        },
+
+        backspace(){
+            this.inputField = this.inputField.substring(0, this.inputField.length - 1);
+        },
+
+        undo(){
+            this.inputField = this.formerExpressions.pop();
         }
     }
 }).mount('#app')
