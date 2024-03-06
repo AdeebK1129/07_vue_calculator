@@ -1,4 +1,6 @@
 import{createApp, ref} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+// import math from "https://www.jsdelivr.com/package/npm/mathjs"
+
 const app = createApp({
     setup(){
 
@@ -8,21 +10,19 @@ const app = createApp({
         return{
            inputField: "",
            formerExpressions: [],
-           errBoolean: false,
         }
     },
 
     methods:{
         evaluateString(){
             try{
-                this.errBoolean = false;
-                eval(this.inputField)
+                // eval(this.inputField)
                 this.formerExpressions.push(this.inputField);
                 this.inputField = eval(this.inputField);
                 console.log(this.formerExpressions);
             } 
             catch (error){
-                this.errBoolean = true;
+                alert("Not a valid expression")
             }
             
         },

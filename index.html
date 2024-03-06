@@ -10,6 +10,7 @@
     <script type="module" src="app.js"></script>
     <div class="calculator" id="app">
         <div class="inputResults"><input v-model="inputField"></input></div>
+        <!-- <div class="inputResults" contenteditable="true">{{inputField}}</div> -->
         <div class="buttons">
             <button class="numPad" @click="backspace">⌫</button>
             <button class="numPad" @click="inputField += '('">(</button>
@@ -20,7 +21,7 @@
             <button class="numPad" @click="inputField += '8'">8</button>
             <button class="numPad" @click="inputField += '9'">9</button>
             <button class="numPad" @click="inputField += '/'">/</button>
-            <button class="numPad" @click="inputField += '√'">√</button>
+            <button class="numPad" @click="inputField += 'Math.sqrt('">√</button>
             <button class="numPad" @click="inputField += '4'">4</button>
             <button class="numPad" @click="inputField += '5'">5</button>
             <button class="numPad" @click="inputField += '6'">6</button>
