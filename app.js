@@ -1,5 +1,5 @@
 import{createApp, ref} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-// import math from "https://www.jsdelivr.com/package/npm/mathjs"
+import { evaluate } from 'https://unpkg.com/mathjs@12.4.0/lib/browser/math.js'
 
 const app = createApp({
     setup(){
