@@ -1,0 +1,9 @@
+2/29: Adeeb: I worked on initlizing all necessary files 
+
+3/1: Adeeb: I created modified the stylistic portion of our calculator using CSS. I began experimenting with CSS Grid and Flexbox
+
+3/4: Adeeb: I was able to create a design of buttons for our calculator but still struggled with deciding whether or not to use Flexbox or grid. At this point I was using flexbox but the formatting wasn't even. 
+
+3/5: Adeeb: I decided to use CSS Grid and used the template column areas feature to map out our entire button and input layout for the calculator
+
+3/6: Adeeb: Changed input area from an edittable div to a text area as edittable divs aren't compatible with v-models. Successfully imported mathjs and began adding v-on bindings to buttons. 

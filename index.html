@@ -5,38 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Calculator </title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
 </head>
 <body>
-    <div class="calculator">
-        <div class="buttons">
-            <div class="inputResults" contenteditable="true">{displayedExpression}</div>
-            <button class="numPad">⌫</button>
-            <button class="numPad">(</button>
-            <button class="numPad">)</button>
-            <button class="numPad">mod</button>
-            <button class="numPad">π</button>
-            <button class="numPad">7</button>
-            <button class="numPad">8</button>
-            <button class="numPad">9</button>
-            <button class="numPad">÷</button>
-            <button class="numPad">√</button>
-            <button class="numPad">4</button>
-            <button class="numPad">5</button>
-            <button class="numPad">6</button>
-            <button class="numPad">X</button>
-            <button class="numPad">x²</button>
-            <button class="numPad">1</button>
-            <button class="numPad">2</button>
-            <button class="numPad">3</button>
-            <button class="numPad">-</button>
-            <button class="equalSign">=</button>
-            <button class="numPad">0</button>
-            <button class="numPad">.</button>
-            <button class="numPad">%</button>
-            <button class="numPad">+</button>
+    <div id="app">
+        <div class="calculator">
+            <div class="buttons">
+                <div class="inputResults" ><textarea v-model="inputField"></textarea></div>
+                <button class="numPad" @click="backspace">⌫</button>
+                <button class="numPad" @click="input('(')">(</button>
+                <button class="numPad" @click="input(')')">)</button>
+                <button class="numPad" @click="input('%')">mod</button>
+                <button class="numPad" @click="input('π')">π</button>
+                <button class="numPad" @click="input('7')">7</button>
+                <button class="numPad" @click="input('8')">8</button>
+                <button class="numPad" @click="input('9')">9</button>
+                <button class="numPad" @click="input('/')">÷</button>
+                <button class="numPad" @click="input('√(')">√</button>
+                <button class="numPad" @click="input('4')">4</button>
+                <button class="numPad" @click="input('5')">5</button>
+                <button class="numPad" @click="input('6')">6</button>
+                <button class="numPad" @click="input('*')">X</button>
+                <button class="numPad" @click="input('^2')">x²</button>
+                <button class="numPad" @click="input('1')">1</button>
+                <button class="numPad" @click="input('2')">2</button>
+                <button class="numPad" @click="input('3')">3</button>
+                <button class="numPad" @click="input('-')">-</button>
+                <button class="equalSign" @click="calculateExpression">=</button>
+                <button class="numPad" @click="input('0')">0</button>
+                <button class="numPad" @click="input('.')">.</button>
+                <button class="numPad" @click="input('/')">%</button>
+                <button class="numPad" @click="input('+')">+</button>
+            </div>
         </div>
+        <p> {{ inputField }} </p>
     </div>
-
+    <script type="module" src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.js" integrity="sha512-D/RyeW6S1nM+OJUBeS/w8U1CVwAaR3EMBRzaacbYkjMqgF+4rcvYR50LC+6egba1WHJSmf6Sua2Zj5V+Cg85lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
