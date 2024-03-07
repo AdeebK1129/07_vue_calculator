@@ -8,6 +8,10 @@
 </head>
 <body>
     <div id="app">
+        <div>
+            <button @click="undo">Undo</button>
+            <button @click="redo">Redo</button>
+        </div>
         <div class="calculator">
             <div class="buttons">
                 <div class="inputResults" ><textarea v-model="inputField"></textarea></div>
@@ -33,11 +37,10 @@
                 <button class="equalSign" @click="calculateExpression">=</button>
                 <button class="numPad" @click="input('0')">0</button>
                 <button class="numPad" @click="input('.')">.</button>
-                <button class="numPad" @click="input('/')">%</button>
+                <button class="numPad" @click="clear">C</button>
                 <button class="numPad" @click="input('+')">+</button>
             </div>
         </div>
-        <p> {{ inputField }} </p>
     </div>
     <script type="module" src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.js" integrity="sha512-D/RyeW6S1nM+OJUBeS/w8U1CVwAaR3EMBRzaacbYkjMqgF+4rcvYR50LC+6egba1WHJSmf6Sua2Zj5V+Cg85lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
