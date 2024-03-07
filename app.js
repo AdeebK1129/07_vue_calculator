@@ -15,7 +15,7 @@ createApp({
   },
   watch: {
     inputField(newVal, oldVal) {
-      const validInputPattern = /^[0-9π().+\-/*^%pq√]*$/;
+      const validInputPattern = /^[0-9π().+\-/*^%pqe√]*$/;
       if (!validInputPattern.test(newVal)) {
         alert('Invalid input. Only numbers, parentheses, and basic operators are accepted.');
         this.inputField = oldVal; 
@@ -56,7 +56,6 @@ createApp({
         this.inputField = lastExpression; 
       }
     },
-    
     redo() {
       if (this.redoStack.length > 0) {
         const lastUndoneExpression = this.redoStack.pop();
