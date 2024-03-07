@@ -21,12 +21,17 @@ body {
     font-size: 2rem; 
 }
 
-textarea{
+textarea {
     text-align: right;
     height: 100px;
     width: 98%;
-    border:none;
- }
+    border: none;
+    font-family: 'ArcadeClassic', sans-serif;
+    font-size: 24px; 
+    background-color: transparent; 
+    color: white; 
+    resize: none; 
+}
 
 
 .equalSign{
@@ -57,8 +62,14 @@ textarea{
 }
 
 
-.operators{
+.operator{
+    background-color: #7f8280;
+    color: white;
+}
 
+.num{
+    background-color: #9da9aa;
+    color: white;
 }
 
 
