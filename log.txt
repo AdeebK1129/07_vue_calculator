@@ -9,3 +9,9 @@
 3/6: Adeeb: Changed input area from an edittable div to a text area as edittable divs aren't compatible with v-models. Successfully imported mathjs and began adding v-on bindings to buttons. 
 
 3/7: Adeeb: Added watcher that checks for valid input; added computed property that converts special characters into computable string during evaluation; added undo and redo functionality through the implementation of redo and undo stacks that store evaluated expressions; added clear button and replaced percent button (seldom used by anyone), One interesting issue was the delete button which wouldnt work on recently calculated values. This was because math.evaluate immediately returns a int and delete uses a slice method intended for strings. As such, a toString method was added to math.evaluate. 
+Added styles to buttons and calculator designs. One very fun challenge was learning how to use regular expressions (regex) in js. Regular expressions are used in instances where a certain character is searched for and to make direct matches. regex was used in both my watcher and computed property. 
+Some helpful resources were:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions 
+https://www.w3schools.com/jsref/jsref_obj_regexp.asp 
+https://www.w3schools.com/jsref/jsref_regexp_g.asp
+
