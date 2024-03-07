@@ -21,13 +21,17 @@ body {
     font-size: 2rem; 
 }
 
-
-textarea{
+textarea {
     text-align: right;
     height: 100px;
     width: 98%;
-    border:none;
- }
+    border: none;
+    font-family: 'ArcadeClassic', sans-serif;
+    font-size: 24px; 
+    background-color: transparent; 
+    color: white; 
+    resize: none; 
+}
 
 
 .equalSign{
@@ -38,17 +42,11 @@ textarea{
     background-color: orange;
 }
 
-.undo{
-    grid-area: undo;
-    background-color: #f3f383;
-    font-size: 1.5rem; 
-}
-
 .buttons{
     display: grid;
     height: auto;
     grid-template-areas: 
-    'undo inputArea inputArea inputArea inputArea'
+    'inputArea inputArea inputArea inputArea inputArea'
     '. . . . .'
     '. . . . .'
     '. . . . .'
@@ -64,8 +62,14 @@ textarea{
 }
 
 
-.operators{
+.operator{
+    background-color: #7f8280;
+    color: white;
+}
 
+.num{
+    background-color: #9da9aa;
+    color: white;
 }
 
 
