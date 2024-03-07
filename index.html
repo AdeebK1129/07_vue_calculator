@@ -10,6 +10,7 @@
     <div id="app">
         <div class="calculator">
             <div class="buttons">
+                <button class="undo" @click="undo">undo</button>
                 <div class="inputResults" ><textarea v-model="inputField"></textarea></div>
                 <button class="numPad" @click="backspace">⌫</button>
                 <button class="numPad" @click="input('(')">(</button>
@@ -20,11 +21,11 @@
                 <button class="numPad" @click="input('8')">8</button>
                 <button class="numPad" @click="input('9')">9</button>
                 <button class="numPad" @click="input('/')">÷</button>
-                <button class="numPad" @click="input('√(')">√</button>
+                <button class="numPad" @click="input('sqrt(')">√</button>
                 <button class="numPad" @click="input('4')">4</button>
                 <button class="numPad" @click="input('5')">5</button>
                 <button class="numPad" @click="input('6')">6</button>
-                <button class="numPad" @click="input('*')">X</button>
+                <button class="numPad" @click="input('*')">*</button>
                 <button class="numPad" @click="input('^2')">x²</button>
                 <button class="numPad" @click="input('1')">1</button>
                 <button class="numPad" @click="input('2')">2</button>
@@ -37,7 +38,7 @@
                 <button class="numPad" @click="input('+')">+</button>
             </div>
         </div>
-        <p> {{ inputField }} </p>
+        <!-- <p> {{ inputField }} </p> -->
     </div>
     <script type="module" src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.js" integrity="sha512-D/RyeW6S1nM+OJUBeS/w8U1CVwAaR3EMBRzaacbYkjMqgF+4rcvYR50LC+6egba1WHJSmf6Sua2Zj5V+Cg85lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

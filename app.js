@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       inputField: '',
+      formerExpressions: [],
     };
   },
   computed: {
@@ -14,14 +15,24 @@ createApp({
   },
   methods: {
     backspace(){
-      this.inputField = this.inputField.slice(0, -1);
+      this.inputField = this.inputField.substring(0, this.inputField.length - 1);
     },
     calculateExpression(){
-      this.inputField = math.evaluate(this.inputField);
+      try{ 
+        this.formerExpressions.push(this.inputField);
+        this.inputField = math.evaluate(this.inputField).toString();}
+      catch (error){
+        alert("not a valid expression")
+      }
+
     },
     input(digit){
       this.inputField += digit;
     },
+
+    undo(){
+      this.inputField = this.formerExpressions.pop();
+    }
 
   },
 }).mount('#app') 

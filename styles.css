@@ -21,6 +21,7 @@ body {
     font-size: 2rem; 
 }
 
+
 textarea{
     text-align: right;
     height: 100px;
@@ -37,11 +38,17 @@ textarea{
     background-color: orange;
 }
 
+.undo{
+    grid-area: undo;
+    background-color: #f3f383;
+    font-size: 1.5rem; 
+}
+
 .buttons{
     display: grid;
     height: auto;
     grid-template-areas: 
-    'inputArea inputArea inputArea inputArea inputArea'
+    'undo inputArea inputArea inputArea inputArea'
     '. . . . .'
     '. . . . .'
     '. . . . .'
