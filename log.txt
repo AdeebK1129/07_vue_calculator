@@ -15,3 +15,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expression
 https://www.w3schools.com/jsref/jsref_obj_regexp.asp 
 https://www.w3schools.com/jsref/jsref_regexp_g.asp
 
+3/8: Adeeb: I worked on the logic for the more advanced undo feature you mentioned in class. I had to create distinctions between manually entered direct inputs and button entered inputs. The isDirectInput boolean helped a lot with this as it allowed me to add to our watcher method which would then determine that, if an inputted digit was valid, it would be added to the undo stack accordingly.  I also implemented the enter button feature which strangely was one of the hardest parts of this. Initially if a user presses a button and then immediately presses enter, the last pressed digit just repeated itself. This was becuase the user had to click back onto the text area. As such, I learned how to use refs to ensure that the user would focus on the text area, forcing enter to be entered in the area. One of the funner aspects of this was creating the equation history feature which allowed me to experiment with JS objects and learn about the shortcut method unshift which, adds an element to the beginning of the array while also returning the length. This is useful because the length of the array is needed in order to know if we have reached our maximum of 3 equations displayed on history or not. 
+Visualizing a stack also helped in making more clear the logic behind our undo and redo methods. 
+
+More helpful resources: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+https://www.cs.usfca.edu/~galles/visualization/StackArray.html
+https://stackoverflow.com/questions/42695728/vue-how-to-call-focus-on-button-click 
+

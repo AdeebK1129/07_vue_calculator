@@ -72,4 +72,25 @@ textarea {
     color: white;
 }
 
+.equation-history {
+    margin-bottom: 20px;
+  }
+  
+  .history-entry {
+    display: flex;
+    justify-content: space-between;
+    background-color: #666;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px; 
+  }
+  
+  .history-expression {
+    text-align: left;
+  }
+  
+  .history-result {
+    text-align: right;
+  }
+
 
